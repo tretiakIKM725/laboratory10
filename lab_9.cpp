@@ -49,7 +49,7 @@ int main () {
     }
   }
 
-  cout << "Odd array : [ ";
+  cout << "Odd array (" << oddCount << ") : [ ";
   for (int i = 0; i < oddCount; i ++){
     cout << oddArray[i];
     if (i < oddCount - 1) {
