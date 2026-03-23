@@ -31,11 +31,33 @@ int main () {
 
   for (int i = 0; i <= k; i++)
   {
-    sum += array[k - i][0 + i];
+    sum += array[k - i][i];
   }
 
   avg = sum / (k + 1);
-  cout << "\nAverage : " << avg;
+  cout << "\nAverage : " << avg << "\n\n";
+
+
+  int oddArray[n * n];
+  int oddCount = 0;
+
+  for (int i = 0; i < n; i++){
+    for (int j = 0; j < n; j++){
+      if (array[i][j] % 2 != 0){
+        oddArray[oddCount++] = array[i][j];
+      }
+    }
+  }
+
+  cout << "Odd array : [ ";
+  for (int i = 0; i < oddCount; i ++){
+    cout << oddArray[i];
+    if (i < oddCount - 1) {
+      cout << ", ";
+    }
+  }
+  cout << " ]" << endl;
+
 
   return 0;
 }
